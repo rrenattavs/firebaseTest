@@ -3,12 +3,13 @@ import { db } from "./firebase-config";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { DataGrid } from "@mui/x-data-grid";  
 import "./App.css";
+import Table from "./Components/Material.jsx";
 
 function App() {
   const [scholarships, setScholarships] = useState([]);
   const [filteredScholarships, setFilteredScholarships] = useState([]);
   const [tagFilter, setTagFilter] = useState("");
-  const [demographicFilter, setDemographicFilter] = useState("youth");
+  const [demographicFilter, setDemographicFilter] = useState("all");
  
 
   useEffect(() => {
